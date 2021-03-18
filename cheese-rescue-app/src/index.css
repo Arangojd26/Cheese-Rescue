@@ -1,4 +1,14 @@
 body {
+
+  background-image: url("./assets/img/inicio.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  width: 1920px;
+  max-height: 1080px;
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +21,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Background para ancho máximo de la pantalla física */
+@media only screen and (max-device-width: 767px) {
+  body {
+    background-image: url("./assets/img/inicio.jpg");
+    color: #FFF;
+    }
+  }
+  /* Background para ancho máximo del navegador */
+  @media only screen and (max-width: 767px) {
+  body {
+    background-image: url("./assets/img/inicio.jpg");
+    color: #FFF;
+    }
+   }

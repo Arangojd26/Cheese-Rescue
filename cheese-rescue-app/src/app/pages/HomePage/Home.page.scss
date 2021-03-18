@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "MoonCheese Regular";
+  src: url("../../../assets/fonts/MoonCheese-Regular.ttf") format("truetype"); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+.o-layer-background {
+  position: absolute;
+  background-color: rgba(0, 20, 37, 0.39);
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.o-title-welcome {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff,
+    0 0 40px rgb(0, 153, 255), 0 0 80px rgb(0, 153, 2550),
+    0 0 90px rgb(0, 153, 255), 0 0 100px rgb(0, 153, 255),
+    0 0 150px rgb(0, 153, 255);
+
+  font-family: "Pacifico";
+  top: 10%;
+  left: 16%;
+  font-size: 4em;
+}
+
+.o-container-start {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    .o-btn-start {
+        color: orange;
+        background: transparent;
+        border-radius: 50%;
+        outline: none;
+    }
+    .o-btn-start:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+      cursor: pointer;
+    }
+    .o-btn-start:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+    .o-text-jugar {
+
+        padding: 2rem; 
+        font-size: 4rem; 
+        color: orange;
+        text-shadow: 0px 0px  5px black;
+    }
+}
+
