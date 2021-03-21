@@ -5,7 +5,9 @@
 
 .o-layer-background {
   position: absolute;
-  background-color: rgba(0, 20, 37, 0.39);
+  background-color: rgba(0, 20, 37, 0.2);
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: -1;
@@ -26,34 +28,19 @@
 }
 
 .o-container-start {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: -1rem;
 
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-
-    .o-btn-start {
-        color: orange;
-        background: transparent;
-        border-radius: 50%;
-        outline: none;
-    }
-    .o-btn-start:hover {
-      transform: scale(1.2);
-      transition: all 0.5s;
-      cursor: pointer;
-    }
-    .o-btn-start:hover {
-      transform: scale(1.2);
-      transition: all 0.5s;
-    }
-    .o-text-jugar {
-
-        padding: 2rem; 
-        font-size: 4rem; 
-        color: orange;
-        text-shadow: 0px 0px  5px black;
-    }
+  .o-text-jugar {
+    font-weight: bold;
+    padding: 1.1rem;
+    font-size: 5rem;
+    color: #07b4d3;
+    -webkit-text-stroke: 3px rgb(255, 255, 255); /* width and color */
+  }
 }
 

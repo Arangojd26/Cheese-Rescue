@@ -1,0 +1,35 @@
+.o-container-loader {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2rem;
+
+  .o-content-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 8rem;
+    background-color: #3c0573;
+    border-radius: 15px;
+    border: 5px solid #ffffff;
+
+    .o-loader {
+    //   margin-top: 1rem;
+      margin-left: 1rem;
+    }
+    
+    .o-text-loading {
+        color: #ffffff;
+        font-size: 34px;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .o-content-loader {
+    background-color: calc(100% - 15vmin);
+  }
+}

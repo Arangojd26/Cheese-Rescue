@@ -1,26 +1,34 @@
 import React from "react";
 import "./ButtonSeek.component.scss";
 import { PlayerContext } from "../../../context/PlayerProvider/PlayerProvider";
+import iconRewind from "../../../../assets/icons/rewind.svg";
+import iconSkip from "../../../../assets/icons/skip.svg";
 
-const ButtonSeek = (props) => {
+const ButtonSeek = ({ type }) => {
   const { playerControl } = React.useContext(PlayerContext);
 
-  const forwardBackwardVideo = (value, typeButton) => {
+  const forwardBackwardVideo = (value) => {
     let actualValue =
-      typeButton === "forward"
-        ? playerControl.played + value
-        : playerControl.played - value;
-    console.log("onActualValue: ", actualValue);
+      type === "backward"
+        ? playerControl.played - value
+        : playerControl.played + value;
+
     playerControl.setSeeking(false);
     playerControl.player.current.seekTo(parseFloat(actualValue));
   };
 
   return (
-    <div>
-      <button type="button" onClick={() => forwardBackwardVideo(5)}>
-        adelantar
-      </button>
-    </div>
+    <button
+      className="o-btn-time-control"
+      type="button"
+      onClick={() => forwardBackwardVideo(5)}
+    >
+      <img
+        className="o-img-time-control"
+        src={type === "backward" ? iconRewind : iconSkip}
+        alt="rewind"
+      />
+    </button>
   );
 };
 

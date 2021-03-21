@@ -7,6 +7,7 @@ const PlayerProvider = (props) => {
   const [playing, setPlaying] = React.useState(true);
   const [seeking, setSeeking] = React.useState(false);
   const [played, setPlayed] = React.useState(0);
+  const [idTime, setIdTime] = React.useState(0);
 
   const player = React.useRef(ReactPlayer);
 
@@ -20,6 +21,8 @@ const PlayerProvider = (props) => {
           setSeeking,
           played,
           setPlayed,
+          idTime,
+          setIdTime,
           player,
         },
       }}

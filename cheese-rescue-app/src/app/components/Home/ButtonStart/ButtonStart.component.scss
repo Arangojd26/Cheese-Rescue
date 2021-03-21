@@ -1,0 +1,51 @@
+.o-btn-start {
+  background: #07b4d3a6;
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  outline: none;
+  margin-top: 10rem;
+  border-color: rgb(255, 255, 255);
+  color: #ffffff;
+  animation: Button-start-spin infinite 2s ease-out;
+}
+.o-btn-start:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.o-btn-start:focus {
+    outline: none;
+  }
+
+@keyframes Button-start-spin {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

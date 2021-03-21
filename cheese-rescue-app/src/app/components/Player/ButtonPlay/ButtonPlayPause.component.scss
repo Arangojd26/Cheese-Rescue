@@ -1,0 +1,37 @@
+.o-btn-play-pause-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding-right: 1rem;
+  margin-top: -1.5rem;
+  border-radius: 50%;
+  width: 3.9rem;
+  height: 3.9rem;
+  background: #fbea0b;
+  outline: none;
+  cursor: pointer;
+
+  .o-img-play-control {
+    width: 1.5rem;
+    margin-left: 0.2rem;
+  }
+  .o-img-pause-control {
+    width: 1.7rem;
+    margin-left: 0rem;
+  }
+}
+
+// .o-btn-play-pause-control:hover,
+// .o-btn-play-pause-control:active {
+// }
+.o-btn-play-pause-control:focus {
+  outline: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .o-btn-play-pause-control:hover {
+    transform: scale(1.2);
+    transition: all 0.5s;
+  }
+}
