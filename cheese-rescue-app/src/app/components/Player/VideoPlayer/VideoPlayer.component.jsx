@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "./VideoPlayer.component.scss";
-import urlVideo from "../../../../assets/vid/Skeler.mp4";
+import urlVideo from "../../../../assets/vid/inicio.mp4";
 import { PlayerContext } from "../../../context/PlayerProvider/PlayerProvider";
 
 const VideoPlayer = () => {
@@ -20,8 +20,6 @@ const VideoPlayer = () => {
     if (!playerControl.seeking) {
       playerControl.setPlayed(parseFloat(playedSeconds));
     }
-
-    
   };
 
   return (

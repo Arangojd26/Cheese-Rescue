@@ -7,7 +7,7 @@ import { QuestionContext } from "../../context/QuestionsProvider/QuestionProvide
 
 const Questions = () => {
   const { playerControl } = React.useContext(PlayerContext);
-  const { question, showQuestions } = React.useContext(QuestionContext);
+  const { question, setQuestion, showQuestions } = React.useContext(QuestionContext);
 
   React.useEffect(() => {
     showQuestions(playerControl);
@@ -15,11 +15,11 @@ const Questions = () => {
   return (
     <>
       {question === "ingresar nombre - v1" ? (
-        <UserName />
+        <UserName setQuestion={setQuestion} />
       ) : question === "pregunta 1 - v1" ? (
-        <UserName />
+        null
       ) : question === "pregunta 2 - v1" ? (
-        <UserName />
+        null
       ) : null}
     </>
   );

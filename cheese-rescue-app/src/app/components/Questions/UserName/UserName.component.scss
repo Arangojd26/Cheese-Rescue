@@ -1,0 +1,63 @@
+.o-container-name {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .o-container-form-name {
+    position: absolute;
+    width: 23rem;
+    height: 22rem;
+    background-image: url("../../../../assets/img/notes.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(6deg);
+
+    .o-form-control {
+      width: 13rem;
+      margin-top: 9rem;
+      margin-left: 3rem;
+      transform: rotate(-6deg);
+    }
+
+    .o-btn-continue {
+      width: 56%;
+      height: 3rem;
+      margin-top: 3rem;
+      margin-left: 4rem;
+      transform: rotate(-6deg);
+      background-color: #1ad5ee;
+      border-color: black;
+      border-radius: 8px;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .o-container-form-name {
+      width: 16rem;
+      height: 16rem;
+    }
+    .o-form-control {
+      width: 10rem;
+      margin-top: 7rem;
+      margin-left: 2.4rem;
+      transform: rotate(-6deg);
+    }
+    .o-btn-continue {
+      height: 2rem;
+      margin-top: 1.5rem;
+      margin-left: 3.4rem;
+      transform: rotate(-6deg);
+      background-color: #1ad5ee;
+      border-color: black;
+      border-radius: 8px;
+    }
+  }
+}

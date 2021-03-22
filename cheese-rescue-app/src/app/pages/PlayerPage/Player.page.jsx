@@ -35,7 +35,7 @@ const Player = () => {
           </QuestionProvider>
         </PlayerProvider>
       </FullScreen>
-      {/* <button onClick={handle.enter}>Full</button> */}
+      <button onClick={handle.enter}>Full</button>
     </>
   ) : (
     <Loading />
