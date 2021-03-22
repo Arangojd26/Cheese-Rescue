@@ -15,6 +15,7 @@ const Player = () => {
   const handle = useFullScreenHandle();
 
   React.useEffect(() => {
+
     setTimeout(() => {
       setIsLoading(false);
     }, 3000);
@@ -22,6 +23,7 @@ const Player = () => {
 
   return !isLoading ? (
     <>
+    {/* <h1 className="o-prueba">An animated element</h1> */}
       <FullScreen handle={handle}>
         <PlayerProvider>
           <VideoPlayer />

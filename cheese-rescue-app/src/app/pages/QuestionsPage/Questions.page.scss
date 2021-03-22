@@ -1,0 +1,18 @@
+$time-animation: 1s;
+
+.o-title-name-user {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px #000000;
+  margin-right: 12%;
+  margin-bottom: 0.5rem;
+  font-size: 25px;
+
+  -webkit-animation: backInDown $time-animation 1; /* Safari 4+ */
+  -moz-animation: backInDown $time-animation 1; /* Fx 5+ */
+  -o-animation: backInDown $time-animation 1; /* Opera 12+ */
+  animation: backInDown $time-animation 1; /* IE 10+, Fx 29+ */
+}

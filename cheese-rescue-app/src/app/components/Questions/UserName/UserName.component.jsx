@@ -2,7 +2,7 @@ import React from "react";
 import "./UserName.component.scss";
 import { PlayerContext } from "../../../context/PlayerProvider/PlayerProvider";
 
-const UserName = ({ setQuestion }) => {
+const UserName = ({ setQuestion, setNameUser }) => {
   const [dataKid, setDataKid] = React.useState({ id: 0, name: "" });
   const { playerControl } = React.useContext(PlayerContext);
 
@@ -15,8 +15,10 @@ const UserName = ({ setQuestion }) => {
 
   const sendData = (event) => {
     event.preventDefault();
-    setQuestion('');
-    playerControl.setPlaying(true)
+    setNameUser(dataKid.name);
+    localStorage.setItem("Nombre", dataKid.name);
+    setQuestion("");
+    playerControl.setPlaying(true);
     console.log("enviando datos..." + dataKid.id + " " + dataKid.name);
   };
 
@@ -37,7 +39,7 @@ const UserName = ({ setQuestion }) => {
           type="button"
           onClick={(e) => sendData(e)}
         >
-          ¡Listo!
+          Continuar
         </button>
       </div>
     </div>

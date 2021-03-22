@@ -1,0 +1,8 @@
+$time-animation: 2s;
+
+.o-prueba {
+  -webkit-animation: bounce $time-animation infinite; /* Safari 4+ */
+  -moz-animation: bounce $time-animation infinite; /* Fx 5+ */
+  -o-animation: bounce $time-animation infinite; /* Opera 12+ */
+  animation: bounce $time-animation infinite; /* IE 10+, Fx 29+ */
+}
