@@ -1,7 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import "./VideoPlayer.component.scss";
-import urlVideo from "../../../../assets/vid/inicio.mp4";
+
 import { PlayerContext } from "../../../context/PlayerProvider/PlayerProvider";
 
 const VideoPlayer = () => {
@@ -27,7 +27,7 @@ const VideoPlayer = () => {
       ref={playerControl.player}
       className="react-player"
       playing={playerControl.playing}
-      url={urlVideo}
+      url={playerControl.url}
       controls={false}
       onProgress={(e) => handleProgress(e)}
       width="100%"

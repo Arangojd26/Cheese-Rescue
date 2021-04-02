@@ -7,4 +7,14 @@
     // justify-content: space-around;
     padding: 0.5rem;
     border-radius: 12px 12px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@media only screen and (max-width: 950px) {
+    .o-container-controls-player {
+        width: 11.5rem;
+        padding: 0.3rem;
+    }
+  }

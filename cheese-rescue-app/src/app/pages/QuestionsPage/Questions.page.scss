@@ -16,3 +16,17 @@ $time-animation: 1s;
   -o-animation: backInDown $time-animation 1; /* Opera 12+ */
   animation: backInDown $time-animation 1; /* IE 10+, Fx 29+ */
 }
+
+.o-rule-shape {
+  position: absolute;
+  background-image: url("../../../assets/img/reglaHo.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 50px;
+  width: 20rem;
+  top: 65px;
+  left: 62%;
+  background-color: #555;
+}

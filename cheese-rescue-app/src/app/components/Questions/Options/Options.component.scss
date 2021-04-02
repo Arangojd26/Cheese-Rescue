@@ -1,0 +1,67 @@
+$time-animation: 3s;
+
+.o-container-options {
+  //   background-color: #313131c7;
+  position: fixed;
+  left: 0;
+  width: 29%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 1;
+
+  .o-content-options {
+    background-color: #111111c7;
+    width: 12rem;
+    height: 72%;
+    border-radius: 0px 12px 12px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    -webkit-animation: backInLeft $time-animation 1; /* Safari 4+ */
+    -moz-animation: backInLeft $time-animation 1; /* Fx 5+ */
+    -o-animation: backInLeft $time-animation 1; /* Opera 12+ */
+    animation: backInLeft $time-animation 1; /* IE 10+, Fx 29+ */
+
+    .o-title-options {
+      color: white;
+      font-size: 27px;
+      margin-top: 1rem;
+    }
+
+    .o-container-buttons-options {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .o-btn-option {
+        width: 8rem;
+        height: 7rem;
+        border-radius: 12px;
+        background-color: #fbea0b;
+        border: none;
+        font-size: 30px;
+      }
+
+      @media only screen and (max-width: 1300px) {
+        .o-btn-option {
+          width: 7rem;
+          height: 3.4rem;
+          font-size: 20px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1300px) {
+      .o-title-options {
+        font-size: 18px;
+      }
+    }
+  }
+}

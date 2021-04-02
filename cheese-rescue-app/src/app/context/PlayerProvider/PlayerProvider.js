@@ -1,13 +1,16 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import videoInicio from '../../../assets/vid/inicio.mp4'
 
 export const PlayerContext = React.createContext();
 
 const PlayerProvider = (props) => {
+  const [url, setUrl] = React.useState(videoInicio);
   const [playing, setPlaying] = React.useState(true);
   const [seeking, setSeeking] = React.useState(false);
   const [played, setPlayed] = React.useState(0);
-  const [idTime, setIdTime] = React.useState(0);
+  const [idTime, setIdTime] = React.useState('ingresar nombre');
+  const [repetition, setRepetition] = React.useState(false);
 
   const player = React.useRef(ReactPlayer);
 
@@ -15,6 +18,8 @@ const PlayerProvider = (props) => {
     <PlayerContext.Provider
       value={{
         playerControl: {
+          url,
+          setUrl,
           playing,
           setPlaying,
           seeking,
@@ -22,6 +27,8 @@ const PlayerProvider = (props) => {
           played,
           setPlayed,
           idTime,
+          repetition,
+          setRepetition,
           setIdTime,
           player,
         },

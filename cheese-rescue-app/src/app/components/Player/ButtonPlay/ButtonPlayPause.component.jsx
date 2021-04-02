@@ -11,7 +11,7 @@ const ButtonPlayPause = () => {
   const handlePlayPause = () => playerControl.setPlaying(!playerControl.playing);
 
   return (
-    <button className="o-btn-play-pause-control" onClick={() => handlePlayPause()}>
+    <button className="o-btn-play-pause-control mx-2 mx-lg-3" onClick={() => handlePlayPause()}>
       <img
         className={playerControl.playing ? "o-img-pause-control" : "o-img-play-control"}
         src={playerControl.playing ? iconPause : iconPlay}

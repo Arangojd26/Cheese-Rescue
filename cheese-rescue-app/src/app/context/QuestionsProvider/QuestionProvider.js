@@ -3,27 +3,65 @@ import React from "react";
 export const QuestionContext = React.createContext();
 
 const QuestionProvider = (props) => {
-
-  const [question, setQuestion] = React.useState('');
+  const [question, setQuestion] = React.useState("");
 
   const showQuestions = (playerControl) => {
     // const { playerControl } = React.useContext(PlayerContext);
-    const seconds = parseInt(playerControl.played.toFixed(0));
+    let seconds = parseInt(playerControl.played.toFixed(0));
     console.log(seconds);
 
-    if (seconds === 19 && playerControl.idTime === 0) {
-      playerControl.setIdTime(1);
+    if (seconds === 19 && playerControl.idTime === "ingresar nombre") {
+      playerControl.setIdTime("pregunta 1 - v1");
       playerControl.setPlaying(false);
       setQuestion("ingresar nombre - v1");
-    } else if (seconds === 29 && playerControl.idTime === 1) {
-      playerControl.setIdTime(2);
+    } else if (seconds === 86 && playerControl.idTime === "pregunta 1 - v1") {
+      setTimeout(() => {
+        // playerControl.setIdTime('pregunta 1 - v2');
+        playerControl.setPlaying(false);
+        setQuestion("pregunta 1 - v1");
+      }, 300);
+    } else if (seconds === 23 && playerControl.idTime === "pregunta 1 - v1 - incorrecto") {
+      // playerControl.setIdTime('pregunta 1 - v2');
+          playerControl.setPlayed(0);
+          console.log("Entras al if")
+          playerControl.setPlaying(false);
+          setQuestion("pregunta 1 - v1");
+          playerControl.setRepetition(true)
+
+    } else if (seconds === 35 && playerControl.idTime === "pregunta 1 - v2") {
+      
+      setTimeout(() => {
+        // playerControl.setIdTime('pregunta 1 - v2');
+        playerControl.setPlaying(false);
+        setQuestion("pregunta 1 - v2");
+        }, 300);
+
+    } else if (seconds === 29 && playerControl.idTime === "pregunta 1 - v2 - incorrecto") {
+      
+      playerControl.setPlayed(0);
+      console.log("Entras al if");
       playerControl.setPlaying(false);
-      setQuestion("pregunta 1 - v1");
-    } else if (seconds === 35 && playerControl.idTime === 2) {
-      playerControl.setIdTime(3);
+      setQuestion("pregunta 1 - v2");
+      playerControl.setRepetition(true);
+
+    } else if (seconds === 41 && playerControl.idTime === "pregunta 1 - v3") {
+
+      setTimeout(() => {
+        playerControl.setPlaying(false);
+        setQuestion("pregunta 1 - v3");
+      }, 300);
+
+    } else if (seconds === 18 && playerControl.idTime === "pregunta 1 - v3 - incorrecto") {
+
+      playerControl.setPlayed(0);
+      console.log("Entras al if");
       playerControl.setPlaying(false);
-      setQuestion("pregunta 2 - v1");
+      setQuestion("pregunta 1 - v3");
+      playerControl.setRepetition(true);
     }
+
+
+
     console.log("id: ", playerControl.idTime);
   };
 
