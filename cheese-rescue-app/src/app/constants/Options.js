@@ -9,20 +9,20 @@ export const validation = {
     question1: {
         idIncorrecta: 'pregunta 1 - v1 - incorrecto',
         idNext: 'pregunta 1 - v2',
-        values: [45, 12, 35],
-        correct: 12
+        values: [16, 32, 24],
+        correct: 32
     },
     question2: {
         idIncorrecta: 'pregunta 1 - v2 - incorrecto',
         idNext: 'pregunta 1 - v3',
-        values: [14, 23, 7],
-        correct: 7
+        values: [8, 14, 12],
+        correct: 12
     },
     question3: {
         idIncorrecta: 'pregunta 1 - v3 - incorrecto',
         idNext: 'correcta final',
-        values: [5, 4, 10],
-        correct: 5
+        values: [26, 22, 28],
+        correct: 26
     }
 }
 export const videos = {
