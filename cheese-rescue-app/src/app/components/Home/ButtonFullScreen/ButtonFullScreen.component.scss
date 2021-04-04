@@ -1,0 +1,29 @@
+.o-container-btn-fullscreen {
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.8rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+
+  .o-btn-fullscreen {
+    width: 3rem;
+  }
+
+  .o-btn-fullscreen:focus {
+    outline: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .o-btn-fullscreen:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+  }
+}

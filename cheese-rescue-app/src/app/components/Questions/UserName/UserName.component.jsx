@@ -25,7 +25,7 @@ const UserName = ({ setQuestion, setNameUser }) => {
   return (
     <div className="o-container-name">
       <div className="o-container-form-name">
-        <form>
+        <form onSubmit={sendData}>
           <input
             type="text"
             placeholder="Ingresa tú nombre"
@@ -33,14 +33,10 @@ const UserName = ({ setQuestion, setNameUser }) => {
             onChange={handleInputChange}
             name="name"
           />
+          <button className="o-btn-continue" type="submit">
+            Continuar
+          </button>
         </form>
-        <button
-          className="o-btn-continue"
-          type="button"
-          onClick={(e) => sendData(e)}
-        >
-          Continuar
-        </button>
       </div>
     </div>
   );

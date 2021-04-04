@@ -9,6 +9,7 @@ import QuestionProvider from "../../context/QuestionsProvider/QuestionProvider";
 import Questions from "../QuestionsPage/Questions.page";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import ContainerPlayer from "../../components/Player/ContainerPlayer/ContainerPlayer.component";
+import ButtonFullScreen from "../../components/Home/ButtonFullScreen/ButtonFullScreen.component";
 
 const Player = () => {
   const [isLoading, setIsLoading] = React.useState(true);
@@ -17,12 +18,11 @@ const Player = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 15000);
   }, []);
 
   return !isLoading ? (
     <>
-      {/* <h1 className="o-prueba">An animated element</h1> */}
       <FullScreen handle={handle}>
         <PlayerProvider>
           <VideoPlayer />
@@ -36,7 +36,7 @@ const Player = () => {
           </QuestionProvider>
         </PlayerProvider>
       </FullScreen>
-      <button onClick={handle.enter}>Full</button>
+      <ButtonFullScreen  handle={handle} />
     </>
   ) : (
     <Loading />
