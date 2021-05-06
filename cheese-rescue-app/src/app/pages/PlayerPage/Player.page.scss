@@ -6,4 +6,12 @@ $time-animation: 2s;
   -o-animation: bounce $time-animation infinite; /* Opera 12+ */
   animation: bounce $time-animation infinite; /* IE 10+, Fx 29+ */
 }
-
+.o-layer-background {
+  position: absolute;
+  background-color: rgba(29, 29, 29, 0.705);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}

@@ -8,6 +8,7 @@ const ButtonFullScreen = ({ handle }) => {
         <input
           className="o-btn-fullscreen"
           type="image"
+          alt="fullscreen"
           src={iconFullScreen}
           onClick={handle.enter}
         />

@@ -30,3 +30,9 @@ $time-animation: 1s;
   left: 62%;
   background-color: #555;
 }
+
+@media only screen and (max-width: 860px) {
+  .o-title-name-user {
+    font-size: 19px;
+  }
+}

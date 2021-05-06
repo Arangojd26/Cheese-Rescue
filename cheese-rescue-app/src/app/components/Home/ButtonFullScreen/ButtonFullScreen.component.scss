@@ -14,16 +14,42 @@
 
   .o-btn-fullscreen {
     width: 3rem;
+    animation: Button-start-spin infinite 2s ease-out;
   }
 
   .o-btn-fullscreen:focus {
     outline: none;
   }
+}
 
-  @media (hover: hover) and (pointer: fine) {
-    .o-btn-fullscreen:hover {
-      transform: scale(1.2);
-      transition: all 0.5s;
-    }
+@keyframes Button-fullscreen {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  25% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  75% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
   }
 }

@@ -23,6 +23,7 @@ const Player = () => {
 
   return !isLoading ? (
     <>
+      <div className="o-layer-background" />
       <FullScreen handle={handle}>
         <PlayerProvider>
           <VideoPlayer />
@@ -36,7 +37,7 @@ const Player = () => {
           </QuestionProvider>
         </PlayerProvider>
       </FullScreen>
-      <ButtonFullScreen  handle={handle} />
+      <ButtonFullScreen handle={handle} />
     </>
   ) : (
     <Loading />
