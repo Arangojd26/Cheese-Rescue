@@ -1,6 +1,7 @@
 import React from "react";
 import "./Options.component.scss";
 import { PlayerContext } from "../../../context/PlayerProvider/PlayerProvider";
+import imgMouse from "../../../../assets/img/mouse.png";
 // import { videos } from '../../../constants/Options'
 // import videoCorrecto1 from '../../../../assets/vid/Skeler.mp4'
 
@@ -38,18 +39,17 @@ const Options = (props) => {
         <h3 className="o-title-options">Opciones</h3>
         <div className="o-container-buttons-options">
           {props.opts.values.map((value) => (
-            <button
-              key={value}
-              className="o-btn-option"
-              type="button"
-              onClick={() => validateAnswer(value)}
-            >
-              {value}
-            </button>
+            <div key={value}>
+              <button
+                className="o-btn-option"
+                type="button"
+                onClick={() => validateAnswer(value)}
+              >
+                {value} cm
+              </button>
+              <img className="o-img-mouse" src={imgMouse} alt="mouse" />
+            </div>
           ))}
-          {/* <button className="o-btn-option" type="button">41</button>
-            <button className="o-btn-option" type="button">49</button>
-            <button className="o-btn-option" type="button">42</button> */}
         </div>
       </div>
     </div>

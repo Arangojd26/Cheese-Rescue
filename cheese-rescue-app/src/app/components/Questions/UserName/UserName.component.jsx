@@ -19,7 +19,7 @@ const UserName = ({ setQuestion, setNameUser }) => {
     localStorage.setItem("Nombre", dataKid.name);
     setQuestion("");
     playerControl.setPlaying(true);
-    console.log("enviando datos..." + dataKid.id + " " + dataKid.name);
+    // console.log("enviando datos..." + dataKid.id + " " + dataKid.name);
   };
 
   return (

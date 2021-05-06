@@ -15,7 +15,7 @@ $time-animation: 3s;
   .o-content-options {
     background-color: #111111c7;
     width: 12rem;
-    height: 72%;
+    height: 74%;
     border-radius: 0px 12px 12px 0px;
     display: flex;
     flex-direction: column;
@@ -44,12 +44,27 @@ $time-animation: 3s;
         width: 8rem;
         height: 7rem;
         border-radius: 12px;
-        background-color: #fbea0b;
+        background-color: #ffe600;
         border: none;
         font-size: 30px;
       }
 
-      @media only screen and (max-width: 1300px) {
+      @media (hover: hover) and (pointer: fine) {
+        .o-btn-option:hover {
+          transform: scale(1.1);
+          transition: all 0.5s;
+        }
+      }
+
+      .o-img-mouse {
+        position: absolute;
+        // top: 0;
+        width: 3rem;
+        margin-left: -1rem;
+        margin-top: -1rem;
+      }
+
+      @media only screen and (max-width: 887px) {
         .o-btn-option {
           width: 7rem;
           height: 3.4rem;
